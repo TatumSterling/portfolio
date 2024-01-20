@@ -2,10 +2,11 @@
 
 const styles = {
   headerStyle: {
-    background: 'red',
+    background: '#c3aae3',
   },
   headingStyle: {
     fontSize: '100px',
+    textAlign: 'center'
   },
 };
 
