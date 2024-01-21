@@ -1,24 +1,27 @@
-
-
 const styles = {
+  pageStyle: {
+    background: '#f2ede4',
+    height: '100vh'
+  },
   headerStyle: {
-    background: '#c3aae3',
+    background: "#e3b3cb",
+    padding: "0.5%",
   },
   headingStyle: {
-    fontSize: '100px',
-    textAlign: 'center'
+    fontSize: "100px",
+    textAlign: "center",
+    font: "",
   },
 };
 
-// We use JSX curly braces to evaluate the style object
+
 
 function Header() {
   return (
-    <header style={styles.headerStyle} className="header">
-      <h1 style={styles.headingStyle}>Welcome</h1>
-    </header>
+        <header style={styles.headerStyle} className="header">
+            <h1 style={styles.headingStyle}>Tatum Sterling</h1>
+        </header>
   );
 }
 
 export default Header;
-
