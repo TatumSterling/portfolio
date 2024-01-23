@@ -8,10 +8,14 @@ const styles = {
     padding: "0.5%",
   },
   headingStyle: {
-    fontSize: "100px",
+
     textAlign: "center",
-    font: "",
+    fontSize: 60,
   },
+  subStyle: {
+    textAlign: 'center',
+    fontSize: 30
+  }
 };
 
 
@@ -20,6 +24,7 @@ function Header() {
   return (
         <header style={styles.headerStyle} className="header">
             <h1 style={styles.headingStyle}>Tatum Sterling</h1>
+            <h2 style={styles.subStyle}> Junior Web Developer</h2>
         </header>
   );
 }

@@ -1,6 +1,15 @@
-import Section from "./Section";
+import Section from "../components/Section";
 
-const styles = {};
+const styles = {
+  linkStyle: {
+    display: 'block',
+    background: '#f5e9f1',
+    textAlign: 'center',
+    fontSize: 20,
+    padding: '5%'
+  }
+}
+
 
 const projects = [
   {
@@ -28,18 +37,19 @@ const projects = [
   },
 ];
 
+
+
 function Home() {
   return (
     <div>
-      {projects.map(({ name, description}, index) => (
-        <Section
-          key={index}
-          name={name}
-          description={description}
-        />
-        
+      {projects.map(({ name, description, anchor }, index) => (
+        <div key={index}>
+          <Section name={name} description={description} />
+          <a href={anchor} style={styles.linkStyle}>
+            Visit {name} project
+          </a>
+        </div>
       ))}
-
     </div>
   );
 }
