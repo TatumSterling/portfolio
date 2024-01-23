@@ -5,7 +5,7 @@ const styles = {
   },
   headerStyle: {
     background: "#e3b3cb",
-    padding: "3%",
+    padding: "4%",
   },
   headingStyle: {
     textAlign: "center",

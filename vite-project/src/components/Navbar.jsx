@@ -45,7 +45,17 @@ function Navbar({ activeLink, onLinkClick }) {
         }}
         onClick={(e) => handleClick('projects', e)}
       >
-        Projects
+        Portfolio
+      </a>
+      <a
+        href="/Resume"
+        style = {{
+          ...styles.navLink,
+          fontWeight: activeLink === 'resume' ? 'bold' : 'normal',
+        }}
+        onClick={(e) => handleClick('resume', e)}
+        >
+        Resume
       </a>
       <a
         href="/Contact"
