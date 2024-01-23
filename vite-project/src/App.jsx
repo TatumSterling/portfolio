@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+// import Footer from './components/Footer';
 
 function App() {
   const [activeLink, setActiveLink] = useState('home');
@@ -30,6 +31,7 @@ function App() {
       <Header />
       <Navbar activeLink={activeLink} onLinkClick={handleLinkClick} />
       {renderComponent()}
+      {/* <Footer /> */}
     </div>
   );
 }
