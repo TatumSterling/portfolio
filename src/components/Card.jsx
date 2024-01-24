@@ -5,18 +5,20 @@ import React, { useState } from 'react';
 
 const styles = {
   card: {
-    margin: 20,
+    margin: 30,
     background: '#f5e9f1',
     transition: 'transform 0.3s ease-in-out',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    border: '1px solid #4a1e39'
   },
   heading: {
     background: '#e3b3cb',
     minHeight: 50,
     lineHeight: 3.5,
-    fontSize: '1.2rem',
-    color: 'white',
+    fontSize: 25,
+    color: 'black',
     padding: '0 20px',
+    fontWeight: 'bold'
   },
   content: {
     padding: 20,

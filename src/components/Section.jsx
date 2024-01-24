@@ -1,12 +1,18 @@
+import './Section.css'
+
 export default function Section(props) {
     const styles = {
       containerStyle:{
         padding: '5%',
         background: '#f5e9f1',
-        height: "100%"
+        height: "100%",
+        animation: 'fadeIn 1s ease-in-out'
       },
       titleStyle: {
-        fontSize: 30
+        fontSize: 30,
+        fontWeight: 'bold',
+        background: '#e3b3cb',
+        padding: '10px'
       },
       paragraphStyle: {
         fontSize: 25
