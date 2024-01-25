@@ -2,7 +2,9 @@
 import Navbar from "../components/Navbar";
 import Projects from "./Projects";
 import Contact from "./Contact";
+
 const styles = {
+
   image1Style: {
     backgroundImage: "url(/whimsical-flowers.jpg)",
     height: '100vh',
@@ -19,7 +21,7 @@ const styles = {
     height: '100vh',
     backgroundRepeat: 'no-repeat',
     position: 'relation',
-    opacity: '0.65',
+    opacity: '0.75',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center',
     backgroundSize: 'cover'
@@ -30,7 +32,7 @@ const styles = {
     height: '100vh',
     backgroundRepeat: 'no-repeat',
     position: 'relation',
-    opacity: '0.65',
+    opacity: '0.55',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center',
     backgroundSize: 'cover'
@@ -40,7 +42,30 @@ const styles = {
     maxHeight: "250px",
     maxWidth: "100%",
     borderRadius: "50%", // Optional: Adds a circular border to the image
+    position: 'relative'
   },
+  sectionStyle: {
+    background: '#2d303b',
+    color: '#f5f0d5',
+    lineHeight: 2,
+    opacity: '1',
+    padding: '30px',
+    display: 'block',
+  },
+  insideStyle: {
+    position: 'absolute',
+    top: '250px',
+    background: '#060708',
+    color: '#f5f0d5',
+    padding: '30px',
+    textAlign: 'center',
+    width: '100vw',
+    fontFamily: 'Akshar, sans-serif',
+    fontSize: 30
+
+
+  }
+
 };
 
 const info = [
@@ -91,21 +116,20 @@ const info = [
 
 function Home() {
   return (
-    // <div>
-    //     {info.map(({ name, description }, index) => (
-    //         <Section key={index} name={name} description={description} />
-    //     ))}
-    // </div>
+
 
     <div className="container">
       <div style={styles.image1Style} className="flowers-img">
         <Navbar />
-        <h1>Tatum Sterling</h1>
+        <div style={styles.insideStyle}>
+            <h1 >Tatum Sterling</h1>
+            <h2 >Junior Web Developer</h2>
+        </div>
       </div>
-      <div className="about-me">
+      <div style={styles.sectionStyle}className="about-me">
         <img
           style={styles.avatarStyle}
-          src="../public/linkedIn-picture.jpg"
+          src="/linkedIn-picture.jpg"
           alt=""
         />
         <h2>About Me</h2>
@@ -125,12 +149,15 @@ function Home() {
         <h2>Projects</h2>
         <Projects />
       </div>
-      <div className="resume">
+      <div style={styles.sectionStyle} className="resume">
         <h2>Resume</h2>
         <a href="/">here</a>
       </div>
       <div style={styles.image3Style} className="crown-img">
-        <Contact />
+        <div  >
+            <Contact />
+        </div>
+        
       </div>
     </div>
   );

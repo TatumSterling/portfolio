@@ -1,6 +1,14 @@
 import Card from "../components/Card";
 
 const styles = {
+  containerStyle: {
+    minHeight: '300px',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '10px',
+    opacity: '1'
+
+  },
   linkStyle: {
     display: 'block',
     background: '#f5e9f1',
@@ -46,7 +54,7 @@ const projects = [
   },
   {
     name: "JAVASCRIPT QUIZ",
-    description: 'This is a quick javascript quiz that I developed by myself using javascript to manipulate HTML elements dynamically, and focused on using web APIs. While taking the javascript quiz, the user will be asked a series of questions after clicking the start button. If the user gets the answer correct, the score will increase, if the user gets the answer incorrect, time is deducted from the clock. You will have 60 seconds to complete the quiz! At the end you will have an opportunity to enter your name and score for the next user to see! You may also click on High Scores in the top left corner to see previous user score.',
+    description: 'This is a quick javascript quiz that I developed myself using javascript to manipulate HTML elements dynamically while focusing on using web APIs.' ,
     anchor: 'https://tatumsterling.github.io/javascript-quiz/',
     repo: 'https://github.com/TatumSterling/javascript-quiz'
   },
@@ -62,12 +70,10 @@ const projects = [
 
 function Projects() {
   return (
-    <div>
-      {projects.map(({ name, description, anchor }, index) => (
-        <div key={index}>
-          <Card name={name} description={description} />
-          <a href={anchor} style={styles.linkStyle}>
-            Visit {name} project</a>
+    <div style={styles.containerStyle}>
+      {projects.map(({ name, description, anchor, repo}, index) => (
+        <div  key={index}>
+          <Card  name={name} description={description} anchor={anchor} repo={repo}/>
         </div>
       ))}
     </div>
