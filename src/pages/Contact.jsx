@@ -4,11 +4,11 @@ import React from "react";
 
 const styles = {
     containerStyle: {
-        background: '#f5e9f1',
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        border: 'solid'
     },
     headerStyle: {
         fontSize: 30,

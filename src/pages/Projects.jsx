@@ -60,19 +60,18 @@ const projects = [
 
 
 
-function Home() {
+function Projects() {
   return (
     <div>
       {projects.map(({ name, description, anchor }, index) => (
         <div key={index}>
           <Card name={name} description={description} />
-          {/* <a href={anchor} style={styles.linkStyle}>
-            Visit {name} project */}
-          {/* </a> */}
+          <a href={anchor} style={styles.linkStyle}>
+            Visit {name} project</a>
         </div>
       ))}
     </div>
   );
 }
 
-export default Home;
+export default Projects;

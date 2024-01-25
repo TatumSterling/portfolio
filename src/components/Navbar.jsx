@@ -10,6 +10,7 @@ const styles = {
     padding: '1rem',
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
     color: '#000000',
+    border: '1px solid #4a1e39'
   },
   navLink: {
     textDecoration: 'none',
