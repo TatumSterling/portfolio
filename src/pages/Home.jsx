@@ -41,7 +41,7 @@ const styles = {
   avatarStyle: {
     maxHeight: "250px",
     maxWidth: "100%",
-    borderRadius: "50%", // Optional: Adds a circular border to the image
+    borderRadius: "50%", 
     position: 'relative'
   },
   sectionStyle: {
@@ -49,8 +49,9 @@ const styles = {
     color: '#f5f0d5',
     lineHeight: 2,
     opacity: '1',
-    padding: '30px',
+    padding: '40px',
     display: 'block',
+    fontFamily: 'Akshar, sans-serif',
   },
   insideStyle: {
     position: 'absolute',
@@ -61,10 +62,9 @@ const styles = {
     textAlign: 'center',
     width: '100vw',
     fontFamily: 'Akshar, sans-serif',
-    fontSize: 30
+    fontSize: 30,
+  },
 
-
-  }
 
 };
 
@@ -114,53 +114,50 @@ const info = [
   },
 ];
 
+
+
 function Home() {
-  return (
+    return (
+      <div className="container">
 
-
-    <div className="container">
-      <div style={styles.image1Style} className="flowers-img">
-        <Navbar />
-        <div style={styles.insideStyle}>
-            <h1 >Tatum Sterling</h1>
-            <h2 >Junior Web Developer</h2>
+        <div id="Home" style={styles.image1Style} className="flowers-img">
+          <div style={styles.insideStyle}>
+            <h1>Tatum Sterling</h1>
+            <h2>Junior Web Developer</h2>
+          </div>
         </div>
-      </div>
-      <div style={styles.sectionStyle}className="about-me">
-        <img
-          style={styles.avatarStyle}
-          src="/linkedIn-picture.jpg"
-          alt=""
-        />
-        <h2>About Me</h2>
-        <p>
-          Hello! My name is Tatum Sterling, and I am 25 years old. I live in San
-          Antonio, Texas, and I am an aspiring full stack developer. In my free
-          time, I enjoy reading, and excercising. I decided to pursue web
-          development because I am passionate about software and problem
-          solving. In addition, web development is a rapidly growing field, and
-          I believe that there are many opportunities for career growth. I am
-          confident that I have the skills and commitment to succeed in this
-          field, and I am excited to see what the future holds. Thank you for
-          taking the time to get to know me!
-        </p>
-      </div>
-      <div style={styles.image2Style} className="books-img">
-        <h2>Projects</h2>
-        <Projects />
-      </div>
-      <div style={styles.sectionStyle} className="resume">
-        <h2>Resume</h2>
-        <a href="/">here</a>
-      </div>
-      <div style={styles.image3Style} className="crown-img">
-        <div  >
-            <Contact />
+        <div id="about-me" style={styles.sectionStyle} className="about-me">
+          <img style={styles.avatarStyle} src="/linkedIn-picture.jpg" alt="avatar" />
+            <p>
+                Hello! My name is Tatum Sterling, and I am 25 years old. I live in San
+                Antonio, Texas, and I am an aspiring full stack developer. In my free
+                time, I enjoy reading, and excercising. I decided to pursue web
+                development because I am passionate about software and problem
+                solving. In addition, web development is a rapidly growing field, and
+                I believe that there are many opportunities for career growth. I am
+                confident that I have the skills and commitment to succeed in this
+                field, and I am excited to see what the future holds. Thank you for
+                taking the time to get to know me!
+            </p>
         </div>
         
+        <div  style={styles.image2Style} className="books-img">
+            <div id="portfolio">
+                <h2>Projects</h2>
+                <Projects />
+            </div>
+        </div>
+        <div id="Resume" style={styles.sectionStyle} className="resume">
+          <h2>Resume</h2>
+          <a href="/">here</a>
+        </div>
+        <div id="Contact" style={styles.image3Style} className="crown-img">
+          <div >
+            <Contact />
+          </div>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
 export default Home;

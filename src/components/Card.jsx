@@ -19,6 +19,7 @@ const styles = {
     margin: 20,
     fontSize: 18,
     justifyContent: 'space-between',
+    fontFamily: 'Akshar, sans-serif',
 
 
   },
@@ -35,6 +36,16 @@ const styles = {
   content: {
     padding: 20,
   },
+  button: {
+    padding: '5px',
+    background: '#2d303b',
+    color: 'white',
+    display: 'flex',
+    margin: '5px',
+    maxWidth: '50%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 };
 
 function Card(props) {
@@ -52,8 +63,8 @@ function Card(props) {
 
           <div style={styles.heading}>{props.name}</div>
           <div style={styles.content}>{props.description}</div>
-          <a href={`${props.anchor}`}>visit {props.name}</a>
-          <a href={`${props.repo}`}>visit repo</a>
+          <a style={styles.button} href={`${props.anchor}`}>visit {props.name}</a>
+          <a style={styles.button} href={`${props.repo}`}>visit repo</a>
 
       </div>
 

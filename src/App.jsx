@@ -1,40 +1,29 @@
-// import { useState } from 'react';
-// import Header from './components/Header';
+
+
+
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-// import Projects from './pages/Projects';
-// import Contact from './pages/Contact';
-import Footer from './components/Footer';
 
-function App() {
-  // const [activeLink, setActiveLink] = useState('home');
+const App = () => {
+  const [activeLink, setActiveLink] = useState('home');
 
-  // const handleLinkClick = (link) => {
-  //   setActiveLink(link);
-  // };
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
 
-  // const renderComponent = () => {
-  //   switch (activeLink) {
-  //     case 'home':
-  //       return <Home />;
-  //     case 'projects':
-  //       return <Projects />;
-  //     case 'contact':
-  //       return <Contact />;
-  //     default:
-  //       return null;
-  //   }
-  // };
+    // Scroll logic can be handled here if the target elements are in this component
+    // Otherwise, pass a callback to the Navbar component to handle scrolling
+  };
 
   return (
     <div>
-      {/* <Header /> */}
-      {/* <Navbar activeLink={activeLink} onLinkClick={handleLinkClick} />
-      {renderComponent()} */}
-      <Home/>
-      <Footer />
+      {/* Render the Navbar component with the callback for scrolling */}
+      <Navbar activeLink={activeLink} onLinkClick={handleLinkClick} />
+      
+      {/* Render the Home component */}
+      <Home activeLink={activeLink} />
     </div>
   );
-}
+};
 
 export default App;
